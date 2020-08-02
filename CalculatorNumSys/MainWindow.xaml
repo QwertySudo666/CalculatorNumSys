@@ -1,0 +1,20 @@
+﻿<Window x:Class="CalculatorNumSys.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorNumSys"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="LayoutGrid" Margin="1">
+        <TextBox x:Name="fromWSys" Margin="30,30,655,337" Text="Из какой системы" />
+        <TextBox x:Name="firstNum"  Text="Число" RenderTransformOrigin="0.505,-4.15" Margin="170,30,516,337"/>
+        <TextBox x:Name="inWSys" Text="В какую систему" RenderTransformOrigin="0.49,0.51" Margin="30,102,655,260" />
+        <Button x:Name="Plus" Content="+" Width="50" Height="50" RenderTransformOrigin="0.51,-2.53" Margin="372,30,368,337" Click="Plus_Click"/>
+        <Button x:Name="Minus" Content="-" Width="50" Height="50" Margin="451,30,289,337" Click="Minus_Click"/>
+        <Button x:Name="Mn" Content="*" Width="50" Height="50" RenderTransformOrigin="0.93,0.68" Margin="529,30,211,337" Click="Mn_Click" />
+        <Button x:Name="Dil" Content="/" Width="50" Height="50" RenderTransformOrigin="0.51,-2.53" Margin="606,30,134,337" Click="Dil_Click"/>
+        <Button x:Name="Perevod" Content="Перевод в другую сист" Height="54" Margin="372,103,272,260" Click="Perevod_Click"/>
+        <Label x:Name="Answer" Margin="30,186,580,181" RenderTransformOrigin="0.153,0.48"/>
+    </Grid>
+</Window>

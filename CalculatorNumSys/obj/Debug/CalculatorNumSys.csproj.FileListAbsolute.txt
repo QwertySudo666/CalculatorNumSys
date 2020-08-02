@@ -1,0 +1,15 @@
+D:\Programming\C#\Calculator\CalculatorNumSys\bin\Debug\CalculatorNumSys.exe.config
+D:\Programming\C#\Calculator\CalculatorNumSys\bin\Debug\CalculatorNumSys.exe
+D:\Programming\C#\Calculator\CalculatorNumSys\bin\Debug\CalculatorNumSys.pdb
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.csprojAssemblyReference.cache
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\MainWindow.g.cs
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\App.g.cs
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys_MarkupCompile.cache
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys_MarkupCompile.lref
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\MainWindow.baml
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.g.resources
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.Properties.Resources.resources
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.csproj.GenerateResource.cache
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.csproj.CoreCompileInputs.cache
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.exe
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.pdb
