@@ -27,34 +27,34 @@ namespace CalculatorNumSys
 
         private void Plus_Click(object sender, RoutedEventArgs e)
         {
-            int num1 = int.Parse(fromWSys.Text);
-            int num2 = int.Parse(firstNum.Text);
+            int num1 = int.Parse(firstNum.Text);
+            int num2 = int.Parse(secondNum.Text);
             int result = num1 + num2;
-            Answer.Content = result;
+            Answer.Content = "Result: " + result;
         }
 
         private void Minus_Click(object sender, RoutedEventArgs e)
         {
-            int num1 = int.Parse(fromWSys.Text);
-            int num2 = int.Parse(firstNum.Text);
+            int num1 = int.Parse(firstNum.Text);
+            int num2 = int.Parse(secondNum.Text);
             int result = num1 - num2;
-            Answer.Content = result;
+            Answer.Content = "Result: " + result;
         }
 
         private void Mn_Click(object sender, RoutedEventArgs e)
         {
-            int num1 = int.Parse(fromWSys.Text);
-            int num2 = int.Parse(firstNum.Text);
+            int num1 = int.Parse(firstNum.Text);
+            int num2 = int.Parse(secondNum.Text);
             int result = num1 * num2;
-            Answer.Content = result;
+            Answer.Content = "Result: " + result;
         }
 
         private void Dil_Click(object sender, RoutedEventArgs e)
         {
-            int num1 = int.Parse(fromWSys.Text);
-            int num2 = int.Parse(firstNum.Text);
-            int result = num1 / num2;
-            Answer.Content = result;
+            int num1 = int.Parse(firstNum.Text);
+            int num2 = int.Parse(secondNum.Text);
+            double result = (double)num1 / (double)num2;
+            Answer.Content = "Result: " + result;
         }
 
         private void Perevod_Click(object sender, RoutedEventArgs e)
