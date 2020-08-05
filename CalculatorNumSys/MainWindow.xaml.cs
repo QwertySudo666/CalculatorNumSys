@@ -25,6 +25,7 @@ namespace CalculatorNumSys
             InitializeComponent();
         }
 
+
         private void Plus_Click(object sender, RoutedEventArgs e)
         {
             int num1 = int.Parse(firstNum.Text);
@@ -64,6 +65,11 @@ namespace CalculatorNumSys
             inOtherSys.Height = 30;
             inOtherSys.Text = "В какую сист";
             LayoutGrid.Children.Add(inOtherSys);
+        }
+
+        private void Test_Click(object sender, RoutedEventArgs e)
+        {
+            Answer.Content = sysnumList.SelectedItem;
         }
     }
 }
