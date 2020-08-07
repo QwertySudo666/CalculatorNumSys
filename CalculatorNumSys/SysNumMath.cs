@@ -10,14 +10,11 @@ namespace CalculatorNumSys
     {
         public static void fromDecimal(int num, int system)
         {
-            int remainder, result;
+            int remainder;
             while (num >= system)
             {
-                result = num / system;
-                remainder = num - (result * system);
-                num = result;
-                Console.Write(remainder);
-                //Console.WriteLine(result);
+                remainder = num % system;
+                num = num / system;
             }
             Console.WriteLine(num);
         }
