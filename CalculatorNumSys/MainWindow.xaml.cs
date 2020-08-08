@@ -59,17 +59,24 @@ namespace CalculatorNumSys
         }
 
         private void Perevod_Click(object sender, RoutedEventArgs e)
-        { 
-            TextBox inOtherSys = new TextBox();
-            inOtherSys.Width = 105;
-            inOtherSys.Height = 30;
-            inOtherSys.Text = "В какую сист";
+        {
+            TextBox inOtherSys = new TextBox
+            {
+                Width = 105,
+                Height = 30,
+                Text = "В какую сист"
+            };
             LayoutGrid.Children.Add(inOtherSys);
         }
 
         private void Test_Click(object sender, RoutedEventArgs e)
         {
             Answer.Content = sysnumList.SelectedItem;
+        }
+
+        private void fromDecTo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

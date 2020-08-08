@@ -8,15 +8,26 @@ namespace CalculatorNumSys
 {
     class SysNumMath
     {
-        public static void fromDecimal(int num, int system)
+        public static List<int> FromDecimal(int num, int system)
         {
             int remainder;
+            List<int> newNum = new List<int>();
             while (num >= system)
             {
                 remainder = num % system;
-                num = num / system;
+                num /= system;
+                newNum.Add(remainder);
             }
-            Console.WriteLine(num);
+            newNum.Add(num);
+            return newNum;
+        }
+        public static void Print()
+        {
+            List<int> numb = FromDecimal(10, 2);
+            for (int i = (numb.Count() - 1); i >= 0; i--)
+            {
+                Console.Write(numb[i]);
+            }
         }
     }
 }
