@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CalculatorNumSys"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="LayoutGrid" Margin="1" >
+    <Grid x:Name="LayoutGrid" Margin="1" x:FieldModifier="public">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -47,6 +47,7 @@
         <Button x:Name="Perevod" Content="Перевод в другую сист" Width="232" Height="50" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="5"  Click="Perevod_Click"/>
         <Button x:Name="Test" Content="Test" Width="100" Height="50" Grid.Row="3" Grid.Column="4" Click="Test_Click"/>
         <Button x:Name="fromDecTo" Content="fromDecTo" Width="232" Height="50" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="5" Click="fromDecTo_Click"/>
-        <Label x:Name="Answer" Content="Result: " Grid.Row="1" Grid.Column="0"/>
+       
+        <Label x:Name="Answer" Content="Result: " Grid.Row="1" Grid.Column="0" x:FieldModifier="public"/>
     </Grid>
 </Window>

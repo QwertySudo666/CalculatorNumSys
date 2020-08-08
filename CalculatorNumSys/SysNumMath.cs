@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace CalculatorNumSys
 {
@@ -21,12 +22,18 @@ namespace CalculatorNumSys
             newNum.Add(num);
             return newNum;
         }
-        public static void Print()
+        public static void Print(int num, int system)
         {
-            List<int> numb = FromDecimal(10, 2);
+            Label qwe = new Label
+            {
+                Width = 105,
+                Height = 30   
+            };
+            MainWindow.LayoutGrid.
+            List<int> numb = FromDecimal(num, system);
             for (int i = (numb.Count() - 1); i >= 0; i--)
             {
-                Console.Write(numb[i]);
+                qwe.Content += Convert.ToString(numb[i]);
             }
         }
     }

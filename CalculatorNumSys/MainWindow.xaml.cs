@@ -76,7 +76,7 @@ namespace CalculatorNumSys
 
         private void fromDecTo_Click(object sender, RoutedEventArgs e)
         {
-
+            SysNumMath.Print(Convert.ToInt32(firstNum.Text), Convert.ToInt32(sysnumList.SelectedIndex));
         }
     }
 }
