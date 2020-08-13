@@ -35,13 +35,17 @@
                 </x:Array>
             </ComboBox.ItemsSource>
         </ComboBox>
-        
 
-        <ComboBox Name="sysnumList_2" Grid.Row="0" Grid.Column="2">
-            <TextBlock>2</TextBlock>
-            <TextBlock>8</TextBlock>
-            <TextBlock>10</TextBlock>
-            <TextBlock>16</TextBlock>
+
+        <ComboBox Name="sysnumList_2" Grid.Row="0" Grid.Column="2" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
+            <ComboBox.ItemsSource>
+                <x:Array Type="{x:Type sys:Int32}">
+                    <sys:Int32>2</sys:Int32>
+                    <sys:Int32>8</sys:Int32>
+                    <sys:Int32>10</sys:Int32>
+                    <sys:Int32>16</sys:Int32>
+                </x:Array>
+            </ComboBox.ItemsSource>
         </ComboBox>
         
 
