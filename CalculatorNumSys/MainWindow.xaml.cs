@@ -57,23 +57,6 @@ namespace CalculatorNumSys
             double result = (double)num1 / (double)num2;
             Answer.Content = "Result: " + result;
         }
-
-        private void Perevod_Click(object sender, RoutedEventArgs e)
-        {
-            TextBox inOtherSys = new TextBox
-            {
-                Width = 105,
-                Height = 30,
-                Text = "В какую сист"
-            };
-            LayoutGrid.Children.Add(inOtherSys);
-        }
-
-        private void Test_Click(object sender, RoutedEventArgs e)
-        {
-            Answer.Content =  sysnumList.SelectedItem;
-            //Answer.Content = sysnumList.SelectedItem;
-        }
         void fromDecTo_Click(object sender, RoutedEventArgs e)
         {
             Answer.Content = "Result: ";

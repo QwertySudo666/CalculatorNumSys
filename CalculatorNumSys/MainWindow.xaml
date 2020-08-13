@@ -56,8 +56,6 @@
         <Button x:Name="Minus" Content="-" Width="100" Height="50" Grid.Row="0" Grid.Column="5" Click="Minus_Click"/>
         <Button x:Name="Mn" Content="*" Width="100" Height="50" Grid.Row="1" Grid.Column="4" Click="Mn_Click" />
         <Button x:Name="Dil" Content="/" Width="100" Height="50" Grid.Row="1" Grid.Column="5" Click="Dil_Click"/>
-        <Button x:Name="Perevod" Content="Перевод в другую сист" Width="232" Height="50" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="5"  Click="Perevod_Click"/>
-        <Button x:Name="Test" Content="Test" Width="100" Height="50" Grid.Row="3" Grid.Column="4" Click="Test_Click"/>
         <Button x:Name="fromDecTo" Content="fromDecTo" Width="232" Height="50" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="5" Click="fromDecTo_Click"/>
 
         <Label x:Name="Answer" Content="Result: " Grid.Row="1" Grid.Column="0" x:FieldModifier = "public"/>
