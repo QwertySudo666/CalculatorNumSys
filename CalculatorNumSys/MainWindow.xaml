@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculatorNumSys"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="LayoutGrid" Margin="1" x:FieldModifier="public">
@@ -23,12 +24,18 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ComboBox Name="sysnumList" Grid.Row="0" Grid.Column="0">
-            <TextBlock>2</TextBlock>
-            <TextBlock>8</TextBlock>
-            <TextBlock>10</TextBlock>
-            <TextBlock>16</TextBlock>
+
+        <ComboBox Name="sysnumList" Grid.Row="0" Grid.Column="0" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
+            <ComboBox.ItemsSource>
+                <x:Array Type="{x:Type sys:Int32}">
+                    <sys:Int32>2</sys:Int32>
+                    <sys:Int32>8</sys:Int32>
+                    <sys:Int32>10</sys:Int32>
+                    <sys:Int32>16</sys:Int32>
+                </x:Array>
+            </ComboBox.ItemsSource>
         </ComboBox>
+        
 
         <ComboBox Name="sysnumList_2" Grid.Row="0" Grid.Column="2">
             <TextBlock>2</TextBlock>
@@ -36,6 +43,7 @@
             <TextBlock>10</TextBlock>
             <TextBlock>16</TextBlock>
         </ComboBox>
+        
 
         <TextBox x:Name="firstNum"  Height="50" Width="100" MaxHeight="400" MaxWidth="500"  Grid.Row="0" Grid.Column="1"  Text="Число" />
         <TextBox x:Name="secondNum" Height="50" Width="100" MaxHeight="400" MaxWidth="500" Grid.Row="0" Grid.Column="3" Text="Из какой системы"/>
@@ -47,7 +55,7 @@
         <Button x:Name="Perevod" Content="Перевод в другую сист" Width="232" Height="50" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="5"  Click="Perevod_Click"/>
         <Button x:Name="Test" Content="Test" Width="100" Height="50" Grid.Row="3" Grid.Column="4" Click="Test_Click"/>
         <Button x:Name="fromDecTo" Content="fromDecTo" Width="232" Height="50" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="5" Click="fromDecTo_Click"/>
-       
-        <Label x:Name="Answer" Content="Result: " Grid.Row="1" Grid.Column="0" x:FieldModifier="public"/>
+
+        <Label x:Name="Answer" Content="Result: " Grid.Row="1" Grid.Column="0" x:FieldModifier = "public"/>
     </Grid>
 </Window>

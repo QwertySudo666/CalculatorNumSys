@@ -71,12 +71,15 @@ namespace CalculatorNumSys
 
         private void Test_Click(object sender, RoutedEventArgs e)
         {
-            Answer.Content = sysnumList.SelectedItem;
+            Answer.Content =  sysnumList.SelectedItem;
+            //Answer.Content = sysnumList.SelectedItem;
         }
-
-        private void fromDecTo_Click(object sender, RoutedEventArgs e)
+        void fromDecTo_Click(object sender, RoutedEventArgs e)
         {
-            SysNumMath.Print(Convert.ToInt32(firstNum.Text), Convert.ToInt32(sysnumList.SelectedIndex));
+            Answer.Content = "Result: ";
+            int num = Convert.ToInt32(firstNum.Text);
+            int system = Convert.ToInt32(sysnumList.SelectedItem);
+            SysNumMath.Print(num, system);
         }
     }
 }
