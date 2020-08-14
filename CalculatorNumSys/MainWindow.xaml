@@ -7,9 +7,8 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="LayoutGrid" Margin="1" x:FieldModifier="public">
+    <Grid x:Name="LayoutGrid" Margin="5" x:FieldModifier="public">
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -24,6 +23,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <GridSplitter Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="2" HorizontalAlignment="Stretch" Margin="1,32,0.5,32"/>
 
         <ComboBox Name="sysnumList" Grid.Row="0" Grid.Column="0" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
             <ComboBox.ItemsSource>
@@ -36,7 +36,6 @@
             </ComboBox.ItemsSource>
         </ComboBox>
 
-
         <ComboBox Name="sysnumList_2" Grid.Row="0" Grid.Column="2" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
             <ComboBox.ItemsSource>
                 <x:Array Type="{x:Type sys:Int32}">
@@ -47,17 +46,41 @@
                 </x:Array>
             </ComboBox.ItemsSource>
         </ComboBox>
-        
 
+        <ComboBox Name="sysnumList_3" Grid.Row="3" Grid.Column="0" Text="Из какой системы" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
+            <ComboBox.ItemsSource>
+                <x:Array Type="{x:Type sys:Int32}">
+                    <sys:Int32>2</sys:Int32>
+                    <sys:Int32>8</sys:Int32>
+                    <sys:Int32>10</sys:Int32>
+                    <sys:Int32>16</sys:Int32>
+                </x:Array>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+
+        <ComboBox Name="inWhatSystem" Grid.Row="3" Grid.Column="2" Text="in what system" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
+            <ComboBox.ItemsSource>
+                <x:Array Type="{x:Type sys:Int32}">
+                    <sys:Int32>2</sys:Int32>
+                    <sys:Int32>8</sys:Int32>
+                    <sys:Int32>10</sys:Int32>
+                    <sys:Int32>16</sys:Int32>
+                </x:Array>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+        
         <TextBox x:Name="firstNum"  Height="50" Width="100" MaxHeight="400" MaxWidth="500"  Grid.Row="0" Grid.Column="1"  Text="Число" />
         <TextBox x:Name="secondNum" Height="50" Width="100" MaxHeight="400" MaxWidth="500" Grid.Row="0" Grid.Column="3" Text="Из какой системы"/>
+        <TextBox x:Name="numForTrans"  Height="50" Width="100" MaxHeight="400" MaxWidth="500"  Grid.Row="3" Grid.Column="1"  Text="Число" />
         
         <Button x:Name="Plus" Content="+" Width="100" Height="50" Grid.Row="0" Grid.Column="4" Click="Plus_Click"/>
         <Button x:Name="Minus" Content="-" Width="100" Height="50" Grid.Row="0" Grid.Column="5" Click="Minus_Click"/>
         <Button x:Name="Mn" Content="*" Width="100" Height="50" Grid.Row="1" Grid.Column="4" Click="Mn_Click" />
         <Button x:Name="Dil" Content="/" Width="100" Height="50" Grid.Row="1" Grid.Column="5" Click="Dil_Click"/>
-        <Button x:Name="fromDecTo" Content="fromDecTo" Width="232" Height="50" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="5" Click="fromDecTo_Click"/>
+        <Button x:Name="toTranslate" Content="To Translate" Width="232" Height="50" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Click="toTranslate_Click" RenderTransformOrigin="0.522,-1.32" Margin="16,9,15.5,10"/>
 
         <Label x:Name="Answer" Content="Result: " Grid.Row="1" Grid.Column="0" x:FieldModifier = "public"/>
+        <Label x:Name="translateResult" Content="Result: " Grid.Row="4" Grid.Column="0" x:FieldModifier = "public"/>
+        
     </Grid>
 </Window>

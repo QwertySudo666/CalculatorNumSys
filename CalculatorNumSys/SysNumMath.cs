@@ -26,15 +26,13 @@ namespace CalculatorNumSys
         public static void Print(int num, int system)
         {
             List<int> numb = FromDecimal(num, system);
-            //MainWindow LA = new MainWindow();
-            //LA.Answer.Content = ;
             for (int i = (numb.Count() - 1); i >= 0; i--)
             {
                 foreach (MainWindow labelAnswer in Application.Current.Windows)
                 {
-                    if (labelAnswer.Answer.GetType() == typeof(Label))
+                    if (labelAnswer.translateResult.GetType() == typeof(Label))
                     {
-                        labelAnswer.Answer.Content += Convert.ToString(numb[i]);
+                        labelAnswer.translateResult.Content += Convert.ToString(numb[i]);
                     }
                 }
             }

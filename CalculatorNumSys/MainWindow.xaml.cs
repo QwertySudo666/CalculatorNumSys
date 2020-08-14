@@ -57,11 +57,11 @@ namespace CalculatorNumSys
             double result = (double)num1 / (double)num2;
             Answer.Content = "Result: " + result;
         }
-        void fromDecTo_Click(object sender, RoutedEventArgs e)
+        void toTranslate_Click(object sender, RoutedEventArgs e)
         {
-            Answer.Content = "Result: ";
-            int num = Convert.ToInt32(firstNum.Text);
-            int system = Convert.ToInt32(sysnumList.SelectedItem);
+            translateResult.Content = "Result: ";
+            int num = Convert.ToInt32(numForTrans.Text);
+            int system = Convert.ToInt32(inWhatSystem.SelectedItem);
             SysNumMath.Print(num, system);
         }
     }
