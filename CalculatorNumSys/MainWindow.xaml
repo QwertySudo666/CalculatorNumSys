@@ -7,7 +7,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="LayoutGrid" Margin="5" x:FieldModifier="public">
+    <Grid x:Name="LayoutGrid" Margin="0" x:FieldModifier="public">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -23,8 +23,9 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <GridSplitter Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="2" HorizontalAlignment="Stretch" Margin="1,32,0.5,32"/>
-
+        <GridSplitter Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="2" HorizontalAlignment="Stretch" Height="10"/>
+        <GridSplitter Grid.Column="3" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" Width="10"></GridSplitter>
+        
         <ComboBox Name="sysnumList" Grid.Row="0" Grid.Column="0" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
             <ComboBox.ItemsSource>
                 <x:Array Type="{x:Type sys:Int32}">

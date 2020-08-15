@@ -12,3 +12,4 @@ D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.csproj.
 D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.csproj.CoreCompileInputs.cache
 D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.exe
 D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.pdb
+D:\Programming\C#\Calculator\CalculatorNumSys\obj\Debug\CalculatorNumSys.csprojAssemblyReference.cache

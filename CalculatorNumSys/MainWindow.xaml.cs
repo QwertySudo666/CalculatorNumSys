@@ -60,9 +60,16 @@ namespace CalculatorNumSys
         void toTranslate_Click(object sender, RoutedEventArgs e)
         {
             translateResult.Content = "Result: ";
-            int num = Convert.ToInt32(numForTrans.Text);
-            int system = Convert.ToInt32(inWhatSystem.SelectedItem);
-            SysNumMath.Print(num, system);
+            if (inWhatSystem.Text == "10")
+            {
+                    translateResult.Content += Convert.ToString(SysNumMath.toDecimal(Convert.ToInt32(sysnumList_3.Text), numForTrans.Text));
+            }
+            else if (sysnumList_3.Text == "10")
+            {
+                int num = Convert.ToInt32(numForTrans.Text);
+                int system = Convert.ToInt32(inWhatSystem.SelectedItem);
+                SysNumMath.Print(num, system);
+            }
         }
     }
 }

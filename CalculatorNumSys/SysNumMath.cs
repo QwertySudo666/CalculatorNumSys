@@ -37,5 +37,22 @@ namespace CalculatorNumSys
                 }
             }
         }
+
+        public static int toDecimal(int system, string num)
+        {
+            int sum = 0;
+            double pow = num.Length-1;
+            int[] arr = new int[num.Length];
+            for (int i = 0; i < num.Length; i++)
+            {
+                arr[i] = Convert.ToInt32(num.Substring(i, 1));
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i] * Convert.ToInt32(Math.Pow(system, pow));
+                pow--;
+            }
+            return sum;
+        }
     }
 }
