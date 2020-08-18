@@ -68,7 +68,28 @@ namespace CalculatorNumSys
             {
                 int num = Convert.ToInt32(numForTrans.Text);
                 int system = Convert.ToInt32(inWhatSystem.SelectedItem);
-                SysNumMath.Print(num, system);
+                //SysNumMath.Print(num, system);
+                List<string> fromDec = SysNumMath.FromDecimal(num, system); 
+                for(int i = 0; i<fromDec.Count;i++)
+                {
+                    translateResult.Content += fromDec[i];
+                }
+            }
+            else if (inWhatSystem.Text != "10")
+            {
+                int from_WhatSystem = (Convert.ToInt32(sysnumList_3.SelectedItem));
+                string num_ForTrans = numForTrans.Text;
+                int in_WhatSystem = (Convert.ToInt32(inWhatSystem.SelectedItem));
+                List<string> newNum = SysNumMath.transToOtherSys(from_WhatSystem, num_ForTrans, in_WhatSystem);
+                for (int i = 0; i < newNum.Count; i++)
+                {
+                    translateResult.Content += newNum[i];
+                }
+                //List<string> binaryArr = SysNumMath.toBinary(Convert.ToInt32(sysnumList_3.SelectedItem), numForTrans.Text);
+                //for (int i = 0; i < binaryArr.Count; i++)
+                //{
+                //    translateResult.Content += binaryArr[i];
+                //}
             }
         }
     }
