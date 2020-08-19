@@ -28,35 +28,104 @@ namespace CalculatorNumSys
 
         private void Plus_Click(object sender, RoutedEventArgs e)
         {
-            int num1 = int.Parse(firstNum.Text);
-            int num2 = int.Parse(secondNum.Text);
-            int result = num1 + num2;
-            Answer.Content = "Result: " + result;
+            Answer.Content = "Result: ";
+            int system = Convert.ToInt32(sysnumList.SelectedItem);
+            int system_2 = Convert.ToInt32(sysnumList_2.SelectedItem);
+            string num = firstNum.Text;
+            string num_2 = secondNum.Text;
+
+            int result = SysNumMath.toDecimal(system, num) + SysNumMath.toDecimal(system_2, num_2);
+            int res_sys = Convert.ToInt32(result_sysnumList.SelectedItem);
+            List<string> arrResult = new List<string>();
+            arrResult = SysNumMath.FromDecimal(result, res_sys);
+            if (res_sys != 10)
+            {
+                for (int i = 0; i < arrResult.Count; i++)
+                {
+                    Answer.Content += arrResult[i];
+                }
+            }
+            else
+            {
+                Answer.Content += Convert.ToString(result);
+            }
         }
 
         private void Minus_Click(object sender, RoutedEventArgs e)
         {
-            int num1 = int.Parse(firstNum.Text);
-            int num2 = int.Parse(secondNum.Text);
-            int result = num1 - num2;
-            Answer.Content = "Result: " + result;
+            Answer.Content = "Result: ";
+            int system = Convert.ToInt32(sysnumList.SelectedItem);
+            int system_2 = Convert.ToInt32(sysnumList_2.SelectedItem);
+            string num = firstNum.Text;
+            string num_2 = secondNum.Text;
+
+            int result = SysNumMath.toDecimal(system, num) - SysNumMath.toDecimal(system_2, num_2);
+            int res_sys = Convert.ToInt32(result_sysnumList.SelectedItem);
+            List<string> arrResult = new List<string>();
+            arrResult = SysNumMath.FromDecimal(result, res_sys);
+            if (res_sys != 10)
+            {
+                for (int i = 0; i < arrResult.Count; i++)
+                {
+                    Answer.Content += arrResult[i];
+                }
+            }
+            else
+            {
+                Answer.Content += Convert.ToString(result);
+            }
         }
 
         private void Mn_Click(object sender, RoutedEventArgs e)
         {
-            int num1 = int.Parse(firstNum.Text);
-            int num2 = int.Parse(secondNum.Text);
-            int result = num1 * num2;
-            Answer.Content = "Result: " + result;
+            Answer.Content = "Result: ";
+            int system = Convert.ToInt32(sysnumList.SelectedItem);
+            int system_2 = Convert.ToInt32(sysnumList_2.SelectedItem);
+            string num = firstNum.Text;
+            string num_2 = secondNum.Text;
+
+            int result = SysNumMath.toDecimal(system, num) * SysNumMath.toDecimal(system_2, num_2);
+            int res_sys = Convert.ToInt32(result_sysnumList.SelectedItem);
+            List<string> arrResult = new List<string>();
+            arrResult = SysNumMath.FromDecimal(result, res_sys);
+            if (res_sys != 10)
+            {
+                for (int i = 0; i < arrResult.Count; i++)
+                {
+                    Answer.Content += arrResult[i];
+                }
+            }
+            else
+            {
+                Answer.Content += Convert.ToString(result);
+            }
         }
 
         private void Dil_Click(object sender, RoutedEventArgs e)
         {
-            int num1 = int.Parse(firstNum.Text);
-            int num2 = int.Parse(secondNum.Text);
-            double result = (double)num1 / (double)num2;
-            Answer.Content = "Result: " + result;
+            Answer.Content = "Result: ";
+            int system = Convert.ToInt32(sysnumList.SelectedItem);
+            int system_2 = Convert.ToInt32(sysnumList_2.SelectedItem);
+            string num = firstNum.Text;
+            string num_2 = secondNum.Text;
+
+            int result = SysNumMath.toDecimal(system, num) / SysNumMath.toDecimal(system_2, num_2);
+            int res_sys = Convert.ToInt32(result_sysnumList.SelectedItem);
+            List<string> arrResult = new List<string>();
+            arrResult = SysNumMath.FromDecimal(result, res_sys);
+            if (res_sys != 10)
+            {
+                for (int i = 0; i < arrResult.Count; i++)
+                {
+                    Answer.Content += arrResult[i];
+                }
+            }
+            else
+            {
+                Answer.Content += Convert.ToString(result);
+            }
         }
+
         void toTranslate_Click(object sender, RoutedEventArgs e)
         {
             translateResult.Content = "Result: ";
@@ -68,7 +137,7 @@ namespace CalculatorNumSys
             {
                 int num = Convert.ToInt32(numForTrans.Text);
                 int system = Convert.ToInt32(inWhatSystem.SelectedItem);
-                //SysNumMath.Print(num, system);
+
                 List<string> fromDec = SysNumMath.FromDecimal(num, system); 
                 for(int i = 0; i<fromDec.Count;i++)
                 {
@@ -85,11 +154,6 @@ namespace CalculatorNumSys
                 {
                     translateResult.Content += newNum[i];
                 }
-                //List<string> binaryArr = SysNumMath.toBinary(Convert.ToInt32(sysnumList_3.SelectedItem), numForTrans.Text);
-                //for (int i = 0; i < binaryArr.Count; i++)
-                //{
-                //    translateResult.Content += binaryArr[i];
-                //}
             }
         }
     }

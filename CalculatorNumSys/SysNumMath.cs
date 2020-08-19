@@ -66,20 +66,6 @@ namespace CalculatorNumSys
             newNum.Reverse();
             return newNum;
         }
-        //public static void Print(int num, int system)
-        //{
-        //    List<string> numb = FromDecimal(num, system);
-        //    for (int i = (numb.Count() - 1); i >= 0; i--)
-        //    {
-        //        foreach (MainWindow labelAnswer in Application.Current.Windows)
-        //        {
-        //            if (labelAnswer.translateResult.GetType() == typeof(Label))
-        //            {
-        //                labelAnswer.translateResult.Content += Convert.ToString(numb[i]);
-        //            }
-        //        }
-        //    }
-        //}
 
         //Ф-я для перевода из n-ой системы в 10
         //arg int system - система числа num
@@ -131,7 +117,6 @@ namespace CalculatorNumSys
         public static List<string> toBinary(int system, string num)
         {
             //8 & 16 to 2
-            //toDecimal(system, num);
             return FromDecimal(toDecimal(system, num), 2);
         }
 

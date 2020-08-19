@@ -48,6 +48,17 @@
             </ComboBox.ItemsSource>
         </ComboBox>
 
+        <ComboBox Name="result_sysnumList" Grid.Row="1" Grid.Column="0" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
+            <ComboBox.ItemsSource>
+                <x:Array Type="{x:Type sys:Int32}">
+                    <sys:Int32>2</sys:Int32>
+                    <sys:Int32>8</sys:Int32>
+                    <sys:Int32>10</sys:Int32>
+                    <sys:Int32>16</sys:Int32>
+                </x:Array>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+
         <ComboBox Name="sysnumList_3" Grid.Row="3" Grid.Column="0" Text="Из какой системы" SelectedItem="{Binding Path=NumberOfZones, Mode=TwoWay}">
             <ComboBox.ItemsSource>
                 <x:Array Type="{x:Type sys:Int32}">
@@ -80,7 +91,7 @@
         <Button x:Name="Dil" Content="/" Width="100" Height="50" Grid.Row="1" Grid.Column="5" Click="Dil_Click"/>
         <Button x:Name="toTranslate" Content="To Translate" Width="232" Height="50" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Click="toTranslate_Click" RenderTransformOrigin="0.522,-1.32" Margin="16,9,15.5,10"/>
 
-        <Label x:Name="Answer" Content="Result: " Grid.Row="1" Grid.Column="0" x:FieldModifier = "public"/>
+        <Label x:Name="Answer" Content="Result: " Grid.Row="1" Grid.Column="1" x:FieldModifier = "public"/>
         <Label x:Name="translateResult" Content="Result: " Grid.Row="4" Grid.Column="0" x:FieldModifier = "public"/>
         
     </Grid>
